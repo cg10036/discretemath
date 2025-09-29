@@ -50,7 +50,7 @@ def get_minor(matrix, i, j):
     return [row[:j] + row[j+1:] for row in (matrix[:i] + matrix[i+1:])]
 
 def gaussian_elimination_inverse(matrix):
-    """가우스 소거법을 이용한 역행렬 계산 함수"""
+    """가우스 소거법을 이용한 역행렬 계산 함수 (추가 기능)"""
     n = len(matrix)
     
     if abs(determinant(matrix)) < EPSILON:
@@ -124,7 +124,7 @@ def gauss_jordan_elimination_inverse(matrix):
     return inverse_matrix
 
 def adjugate_method_inverse(matrix):
-    """수반행렬(Adjugate Matrix)을 이용한 역행렬 계산 함수 (추가 기능)"""
+    """수반행렬(Adjugate Matrix)을 이용한 역행렬 계산 함수"""
     n = len(matrix)
     det = determinant(matrix)
 
